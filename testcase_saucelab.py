@@ -1,5 +1,4 @@
 import time
-from urllib.parse import uses_relative
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -12,7 +11,7 @@ driver.get("https://www.saucedemo.com/")
 time.sleep(3)
 
 driver.maximize_window()
-"""
+
 #TESTCASE: 1 To check heading
 
 Text= driver.find_element(By.CLASS_NAME,"login_logo").text
@@ -88,7 +87,7 @@ if val4 == "Epic sadface: Username and password do not match any user in this se
 
 else:
     print("FAILED")
-driver.refresh()"""
+driver.refresh()
 
 
 #Testcase: 6 Login successfully
@@ -212,7 +211,8 @@ if total_price == ui_total:
     print("PASSED")
 else:
     print("FAILED")
-
+driver.execute_script("window.scrollTo(0,document.body.scrollHeight );")
+time.sleep(3)
 time.sleep(3)
 
 
